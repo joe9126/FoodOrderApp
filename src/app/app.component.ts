@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { MatCommonModule } from '@angular/material/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
