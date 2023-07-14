@@ -7,10 +7,18 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
+import { ProductsComponent } from './public/products/products.component';
+import { CartComponent } from './public/cart/cart.component';
+import {MatSidenavModule} from '@angular/material/sidenav'; 
+import {MatListModule} from '@angular/material/list';
+import {NgIf} from '@angular/common';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ProductsComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
@@ -18,7 +26,11 @@ import {MatButtonModule} from '@angular/material/button';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSidenavModule,
+    NgIf,
+    MatListModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]
