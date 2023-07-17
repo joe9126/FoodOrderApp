@@ -8,7 +8,7 @@ import { ProductsService } from 'app/services/products/products.service';
 })
 export class ProductsComponent implements OnInit{
   products : any;
-  isHidden = false;
+  isHidden = true;
   constructor(private productsService : ProductsService){}
 
   ngOnInit(): void {

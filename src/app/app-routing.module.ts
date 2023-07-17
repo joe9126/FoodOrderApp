@@ -5,9 +5,10 @@ import { PublicComponent } from './public/public.component';
 import { CartComponent } from './public/cart/cart.component';
 
 const routes: Routes = [
+  {path:'', redirectTo:'shop', pathMatch:'full'},
   {path: '',component:PublicComponent,
       children:[
-        {path:'products',component:ProductsComponent},
+        {path:'shop',component:ProductsComponent},
         {path:'cart',component:CartComponent}
       ]
   }

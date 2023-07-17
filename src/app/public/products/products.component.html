@@ -2,13 +2,14 @@
   <div class="row justify-content-center mt-5 gx-5">
 
   <div class="col-sm-12 col-md-3 p-2 m-2" *ngFor="let product of products">
-    <div class="card" style="width: 18rem;" (mouseenter)="isHidden = !isHidden" (mouseleave)="isHidden=!isHidden">
+    <div class="card" style="width: 18rem;" (mouseenter)="isHidden = isHidden" (mouseleave)="isHidden=isHidden" [routerLink]="">
       
       <img src="{{product.image}}" class="card-img-top align-center" alt="...">      
       <div class="card-body">
+        <h3 class="text-left">${{product.price}}</h3>
         <h5 class="card-title">{{product.title}}</h5>
         <p class="card-text">{{product.description}}</p>
-        <h3 class="text-center">${{product.price}}</h3>
+       
        
 
         <ng-container class="d-grid gap-2 col-12 mx-auto d-none" *ngIf="isHidden">
