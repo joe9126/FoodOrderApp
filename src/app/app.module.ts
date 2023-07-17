@@ -9,7 +9,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
-
+import {MatBadgeModule} from '@angular/material/badge';
 
 import {MatSidenavModule} from '@angular/material/sidenav'; 
 import {MatListModule} from '@angular/material/list';
@@ -35,6 +35,7 @@ import { RouterModule } from '@angular/router';
     HttpClientModule,
     MatListModule,
     MatExpansionModule,
+    MatBadgeModule,
     PublicModule
   ],
   providers: [],

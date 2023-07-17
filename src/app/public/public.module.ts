@@ -7,17 +7,22 @@ import { PublicComponent } from './public.component';
 import { ProductsService } from 'app/services/products/products.service';
 import { ProductsComponent } from './products/products.component';
 import { CartComponent } from './cart/cart.component';
-
+import {MatTableModule} from '@angular/material/table';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { ValueArrayPipe } from 'app/value-array-pipe'; 
 @NgModule({
   declarations: [
     PublicComponent,
     ProductsComponent,
-    CartComponent
+    CartComponent,
+    ValueArrayPipe
   ],
   imports: [
     CommonModule,
     MatCardModule,
     MatIconModule,
+    MatTableModule,
+    MatFormFieldModule,
     AppRoutingModule
   ],
   providers:[

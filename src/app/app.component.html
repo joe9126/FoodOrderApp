@@ -3,7 +3,7 @@
     <button mat-mini-fab color="black" aria-label="Example icon button with a menu icon" (click)="sidenav.toggle()" matTooltip="Menu">
       <mat-icon>menu</mat-icon>
     </button>
-    <span class="mr-2">My <strong class="text-uppercase">Kibandaski</strong></span>
+    <span class="mr-2 home">My <strong class="text-uppercase" [routerLink]="['/']">{{title}}</strong></span>
     <div class="form-group d-flex justify-content-center w-75">
         <input type="text" class="form-control search p-2 w-75" placeholder="Search Product" name="searchbox"/>
     </div>
@@ -13,10 +13,16 @@
     <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
       <mat-icon>login </mat-icon>
     </button>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-      <span class="cart-item-counter">0</span>
-      <mat-icon>shopping_cart</mat-icon>
+
+    <div class="demo-section">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" [routerLink]="['cart']">
+      <mat-icon matBadge="4" matBadgeColor="warn" [routerLink]="['/cart']">shopping_cart</mat-icon>
+      <!-- Include text description of the icon's meaning for screen-readers -->
+      <span class="cdk-visually-hidden">
+       Example with a home icon with overlaid badge showing the number 15
+      </span>
     </button>
+  </div>
   </mat-toolbar>
 
 

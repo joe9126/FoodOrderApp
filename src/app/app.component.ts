@@ -7,7 +7,7 @@ import { MatCommonModule } from '@angular/material/core';
   
 })
 export class AppComponent {
-  title = 'kibandaski';
+  title = 'Kibandaski';
 
   showFiller = false;
 }

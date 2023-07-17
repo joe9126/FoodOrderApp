@@ -1,1 +1,109 @@
-<p>cart works!</p>
+
+    <ng-container *ngIf="isHidden">
+        <div class="container">
+            <div class="d-flex flex-row">
+                <div class="p-2 m-2">
+                    <div class="card p-5">
+                        <div class="card-body">
+                           
+                           
+                            <h2 class="card-title text-center">Your {{title}} Cart is empty</h2>
+                            <h3 class="cart-text text-center" >
+                                <a  [routerLink]="['/shop']">Start shopping our deals today.</a>
+                            </h3>
+                            <img src="assets/images/icons8-empty-cart-100.png" alt="" class="mx-auto d-block">
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+    
+
+    <ng-container *ngIf="true" class="cart-list">
+        <div class="row justify-content-center mb-5">
+            <div class="col-10">
+                <h2 class="text-center">My Cart</h2>
+                <div class="table-responsive" > 
+                  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 table table-striped table-hover">
+    
+               
+                  
+                    <ng-container matColumnDef="Sr No">
+                      <th mat-header-cell *matHeaderCellDef> No. </th>
+                      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+                    </ng-container>
+                  
+                   
+                    <ng-container matColumnDef="Image">
+                      <th mat-header-cell *matHeaderCellDef> Image </th>
+                      <td mat-cell *matCellDef="let element"> 
+                        <img src="{{element.image}}" alt="{{element.title}}">
+                        
+                     </td>
+                    </ng-container>
+                  
+                  
+                    <ng-container matColumnDef="Name">
+                      <th mat-header-cell *matHeaderCellDef> Title </th>
+                      <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+                    </ng-container>
+           
+                    <ng-container matColumnDef="Description">
+                      <th mat-header-cell *matHeaderCellDef> Description </th>
+                      <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+                    </ng-container>
+    
+                    <ng-container matColumnDef="Price">
+                        <th mat-header-cell *matHeaderCellDef> Price </th>
+                        <td mat-cell *matCellDef="let element"> {{element.price}} </td>
+                      </ng-container>
+    
+                      <ng-container matColumnDef="Quantity">
+                        <th mat-header-cell *matHeaderCellDef> Quantity </th>
+                        <td mat-cell *matCellDef="let element"> {{element.quantity}} </td>
+                      </ng-container>
+    
+                      <ng-container matColumnDef="Total">
+                        <th mat-header-cell *matHeaderCellDef> Total </th>
+                        <td mat-cell *matCellDef="let element"> {{element.quantity * element.price}} </td>
+                      </ng-container>
+                      <ng-container matColumnDef="Action">
+                        <th mat-header-cell *matHeaderCellDef> Action </th>
+                        <td mat-cell *matCellDef="let element">
+                            <button mat-icon-button matTooltip="Delete" class="btn">
+                                <mat-icon>delete_forever</mat-icon>
+                            </button>    
+                        </td>
+                      </ng-container>
+                  
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                  </table>
+                </div>
+            </div>
+        </div>
+    </ng-container> 
+<!--
+    <ng-container *ngIf="true"  >
+        <div class="d-flex vw-90"  >
+        <div class="d-flex flex-row" *ngFor="let element of dataSource">
+            {{element}}
+            <div class="card mb-2">
+                <div class="row">
+                    <div class="col-4">
+                        <img src="{{element.image}}" alt="{{element.name}}">
+                    </div>
+                    <div class="col-8">
+                        <h3>{{element.name}}</h3>
+                        <small>Category <span class="text-gray italic">{{element.category}}</span></small>
+                        <p class="m2-2">{{element.description}}</p>
+                     
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </ng-container>
+-->

@@ -1,3 +1,6 @@
+.container-fluid{
+
+}
 .example-spacer {
     flex: 1 1 auto;
   }
@@ -12,7 +15,7 @@
 }
 
 .app-container {
-    height: 90%;
+    height: 100%;
     margin: 0;
 }  
 .app-sidenav {
@@ -36,6 +39,13 @@
   text-align: center;
   top: 0;
   left: 25px;
+}
+
+.mat-sidenav-content{
+  overflow-x: hidden;
+}
+.home:hover{
+  cursor: pointer;
 }
   @media (max-width: 480px){
   .search{
